@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Chat-Commands | bestofHustensemal</title>
+  <meta name="description" content="Chat-Commands für den Vogelstream auf Twitch und YouTube.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Twitch &amp; YouTube</p>
+        <h1>Chat-Commands</h1>
+        <p class="intro">Hier findest Du alle verfügbaren Commands für den Vogelstream. Gib einen Befehl einfach in den Chat ein. Alle aufgeführten Commands funktionieren grundsätzlich auf Twitch und YouTube.</p>
+      </div>
+      <picture class="hero-logo">
+        <source srcset="assets/logo.webp" type="image/webp">
+        <img src="assets/logo.png" alt="Tasse mit Milchschaum – Kanallogo" width="440" height="419">
+      </picture>
+    </header>
+
+    <section class="toolbar" aria-label="Commands durchsuchen und filtern">
+      <label class="search">
+        <span>Command oder Begriff suchen</span>
+        <input id="searchInput" type="search" placeholder="z. B. !amsel, Kaffee oder Song" autocomplete="off" spellcheck="false">
+      </label>
+      <div class="filters" role="group" aria-label="Kategorie auswählen">
+        <button class="filter active" data-filter="all" type="button">Alle</button>
+        <button class="filter" data-filter="voegel" type="button">Vögel</button>
+        <button class="filter" data-filter="tiere" type="button">Weitere Tiere</button>
+        <button class="filter" data-filter="essen" type="button">Begrüßung &amp; Verpflegung</button>
+        <button class="filter" data-filter="sonstige" type="button">Sonstige</button>
+        <button class="filter" data-filter="spiele" type="button">Spielereien</button>
+        <button class="filter" data-filter="musik" type="button">KI-Musik</button>
+      </div>
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+    </section>
+
+    <div id="commandList">
+      <section class="command-section" data-category="voegel">
+        <div class="section-heading">
+          <div><p class="section-kicker">Sichtungen</p><h2>Vögel am Futterhaus</h2></div>
+          <span class="section-count">21 Commands</span>
+        </div>
+        <div class="command-grid">
+          <article class="command-card" data-search="eichelhäher eurasian jay"><code>!eichelhäher</code><p>Eurasian jay</p></article>
+          <article class="command-card" data-search="amsel blackbird"><code>!amsel</code><p>Blackbird</p></article>
+          <article class="command-card" data-search="hausrotschwanz black redstart"><code>!hausrotschwanz</code><p>Black redstart</p></article>
+          <article class="command-card" data-search="türkentaube collared pigeon"><code>!türkentaube</code><p>Collared pigeon</p></article>
+          <article class="command-card" data-search="ringeltaube wood pigeon"><code>!ringeltaube</code><p>Wood pigeon</p></article>
+          <article class="command-card" data-search="straßentaube feral pigeon"><code>!straßentaube</code><p>Feral pigeon</p></article>
+          <article class="command-card" data-search="hohltaube stock dove"><code>!hohltaube</code><p>Stock dove</p></article>
+          <article class="command-card" data-search="spatz house sparrow"><code>!spatz</code><p>House sparrow</p></article>
+          <article class="command-card" data-search="blaumeise blue tit"><code>!blaumeise</code><p>Blue tit</p></article>
+          <article class="command-card" data-search="kohlmeise great tit"><code>!kohlmeise</code><p>Great tit</p></article>
+          <article class="command-card" data-search="kleiber eurasian nuthatch"><code>!kleiber</code><p>Eurasian nuthatch</p></article>
+          <article class="command-card" data-search="buntspecht great spotted woodpecker"><code>!buntspecht</code><p>Great spotted woodpecker</p></article>
+          <article class="command-card" data-search="grünspecht green woodpecker"><code>!grünspecht</code><p>Green woodpecker</p></article>
+          <article class="command-card" data-search="rotkehlchen european robin"><code>!rotkehlchen</code><p>European robin</p></article>
+          <article class="command-card" data-search="elster magpie"><code>!elster</code><p>Magpie</p></article>
+          <article class="command-card" data-search="rabenkrähe carrion crow"><code>!rabenkrähe</code><p>Carrion crow</p></article>
+          <article class="command-card" data-search="kolkrabe raven"><code>!kolkrabe</code><p>Raven</p></article>
+          <article class="command-card" data-search="star european starling"><code>!star</code><p>European starling</p></article>
+          <article class="command-card" data-search="kernbeißer hawfinch"><code>!kernbeißer</code><p>Hawfinch</p></article>
+          <article class="command-card" data-search="sperber sparrow hawk sparrowhawk"><code>!sperber</code><p>Sparrow hawk</p></article>
+          <article class="command-card featured" data-search="stats statistik übersicht vogelsichtungen heute aktueller tag"><code>!stats</code><p>Übersicht der Vogel-Sichtungen des aktuellen Tages.</p></article>
+        </div>
+      </section>
+
+      <section class="command-section" data-category="tiere">
+        <div class="section-heading"><div><p class="section-kicker">Sichtungen</p><h2>Weitere Tiere – und komische Vögel</h2></div><span class="section-count">9 Commands</span></div>
+        <div class="command-grid">
+          <article class="command-card" data-search="gang sehr viele spatzen"><code>!gang</code><p>Sehr viele Spatzen.</p></article>
+          <article class="command-card" data-search="eichi eichhörnchen sichtung"><code>!eichi</code><p>Eichhörnchen-Sichtung.</p></article>
+          <article class="command-card" data-search="katze sichtung"><code>!katze</code><p>Katze!!!!!</p></article>
+          <article class="command-card" data-search="fliege fliegen hinter fliegen"><code>!fliege</code><p>„Wenn Fliegen hinter Fliegen fl…“</p></article>
+          <article class="command-card" data-search="biene sichtung"><code>!biene</code><p>Da ist eine Biene!</p></article>
+          <article class="command-card" data-search="hummel sichtung"><code>!hummel</code><p>Hummel-Sichtung.</p></article>
+          <article class="command-card" data-search="wespe sichtung na super"><code>!wespe</code><p>Na super…</p></article>
+          <article class="command-card" data-search="schmetterling sichtung toll"><code>!schmetterling</code><p>Toll!</p></article>
+          <article class="command-card" data-search="nv nachfüllvogel nachfüllen futter"><code>!nv</code><p>Der Nachfüllvogel füllt nach.</p></article>
+        </div>
+      </section>
+
+      <section class="command-section" data-category="essen">
+        <div class="section-heading"><div><p class="section-kicker">Chat-Service</p><h2>Begrüßung, Essen &amp; Trinken</h2></div><span class="section-count">22 Commands</span></div>
+        <div class="command-grid">
+          <article class="command-card featured" data-search="tts text-to-speech spricht text"><code>!tts {Text}</code><p>Lässt Deinen eingegebenen Text sprechen.</p></article>
+          <article class="command-card" data-search="palimpalim begrüßung pommes"><code>!palimpalim</code><p>Begrüßung mit Pommes.</p></article>
+          <article class="command-card" data-search="moin moinmoin begrüßung"><code>!moin / !moinmoin</code><p>Norddeutsche Begrüßung.</p></article>
+          <article class="command-card" data-search="bier kühles bier ab vier"><code>!bier</code><p>Kühles Bier ab 4.</p></article>
+          <article class="command-card" data-search="rundebier flüssigbrot chat"><code>!rundebier</code><p>Flüssigbrot für den Chat!</p></article>
+          <article class="command-card" data-search="chips kartoffelchips tüte"><code>!chips</code><p>Eine Tüte Kartoffelchips.</p></article>
+          <article class="command-card" data-search="croissant gebäck"><code>!croissant</code><p>Leckeres Gebäck.</p></article>
+          <article class="command-card" data-search="currywurst beilage"><code>!currywurst</code><p>Currywurst mit Beilage.</p></article>
+          <article class="command-card" data-search="döner alles"><code>!döner</code><p>Döner mit alles.</p></article>
+          <article class="command-card" data-search="eisbecher eiscreme"><code>!eisbecher</code><p>Ein Becher mit leckerer Eiscreme.</p></article>
+          <article class="command-card" data-search="fassbrause fass"><code>!fassbrause</code><p>Fassbrause vom Fass.</p></article>
+          <article class="command-card" data-search="glühwein warm wärmt seele"><code>!glühwein</code><p>Wärmt die Seele.</p></article>
+          <article class="command-card" data-search="kaffee tasse"><code>!kaffee</code><p>Eine Tasse Kaffee.</p></article>
+          <article class="command-card" data-search="limo limonade kühlschrank"><code>!limo</code><p>Frisch aus dem Kühlschrank.</p></article>
+          <article class="command-card" data-search="mate mate-tee tee"><code>!mate</code><p>Ein Mate-Tee, lecker!</p></article>
+          <article class="command-card" data-search="ostfriesentee tee sahne"><code>!ostfriesentee</code><p>Ostfriesentee mit Sahne.</p></article>
+          <article class="command-card" data-search="rundelimo getränke alle"><code>!rundelimo</code><p>Getränke nach Wahl für alle.</p></article>
+          <article class="command-card" data-search="lutscher dauerlutscher"><code>!lutscher</code><p>Dauerlutscher.</p></article>
+          <article class="command-card" data-search="pommes flasche pommes"><code>!pommes</code><p>Eine Flasche Pommes!</p></article>
+          <article class="command-card" data-search="schoki heiße schokolade tasse"><code>!schoki</code><p>Eine Tasse heiße Schokolade.</p></article>
+          <article class="command-card" data-search="schwarzwälderkirsch schwarzwälder kirsch torte kuchen"><code>!schwarzwälderkirsch</code><p>Ein Stück Torte.</p></article>
+          <article class="command-card" data-search="tee tasse"><code>!tee</code><p>Eine Tasse Tee.</p></article>
+        </div>
+      </section>
+
+      <section class="command-section" data-category="sonstige">
+        <div class="section-heading"><div><p class="section-kicker">Allgemein</p><h2>Sonstige Commands</h2></div><span class="section-count">9 Commands</span></div>
+        <div class="command-grid">
+          <article class="command-card" data-search="clip erstellt video"><code>!clip</code><p>Ich habe einen Clip erstellt!</p></article>
+          <article class="command-card" data-search="chuck reh chuck norris"><code>!chuck</code><p>Das Reh namens Chuck Norris.</p></article>
+          <article class="command-card" data-search="chuckloben chuck loben"><code>!chuckloben</code><p>Darf auch mal sein.</p></article>
+          <article class="command-card" data-search="cn chuck norris witze"><code>!cn</code><p>Chuck-Norris-Witze.</p></article>
+          <article class="command-card" data-search="dobby was macht der"><code>!dobby</code><p>Was macht der da?</p></article>
+          <article class="command-card" data-search="dobbyloben dobby lob"><code>!dobbyloben</code><p>Lob tut immer gut.</p></article>
+          <article class="command-card" data-search="gg gut gemacht good game"><code>!gg</code><p>Gut gemacht!</p></article>
+          <article class="command-card" data-search="quote zitat zufall zufalls-zitate"><code>!quote</code><p>Zufalls-Zitate.</p></article>
+          <article class="command-card" data-search="uff schief gegangen fehler"><code>!uff</code><p>Wenn etwas schiefging.</p></article>
+        </div>
+      </section>
+
+      <section class="command-section" data-category="spiele">
+        <div class="section-heading"><div><p class="section-kicker">Punkte &amp; Interaktion</p><h2>Spielereien</h2></div><span class="section-count">6 Commands</span></div>
+        <div class="notice"><strong>Neu:</strong> Die aktuelle Währung heißt <em>Federn</em>. Die älteren Pommes-Commands funktionieren vorerst weiterhin.</div>
+        <div class="command-grid">
+          <article class="command-card new" data-search="wasser vögel spenden 250 federn neue währung"><code>!wasser</code><p>Spendet den Vögeln etwas Wasser. Kostet 250 Federn.</p><span class="tag">Neu</span></article>
+          <article class="command-card new" data-search="federn punkte abfragen neue währung"><code>!federn</code><p>Zeigt Deine bereits gesammelten Federn an.</p><span class="tag">Neu</span></article>
+          <article class="command-card old" data-search="imbissbude spiel pommes punkte reise gewinnen beispiel 5"><code>!imbissbude 5</code><p>Eine virtuelle Reise mit Deinen Pommes. Mit etwas Glück gewinnst Du weitere Punkte.</p><span class="tag muted-tag">Klassiker</span></article>
+          <article class="command-card old" data-search="8ball orakel frage ja nein spaß"><code>!8ball {Frage}</code><p>Stelle dem Orakel eine Ja/Nein-Frage – bitte nicht ernst nehmen.</p><span class="tag muted-tag">Klassiker</span></article>
+          <article class="command-card old" data-search="points punkte pommes abfrage"><code>!points</code><p>Zeigt Deine bisher gesammelten Pommes an.</p><span class="tag muted-tag">Klassiker</span></article>
+          <article class="command-card old" data-search="duell zuschauer punkte pommes annehmen ablehnen cancel"><code>!duell</code><p>Fordere einen Zuschauer zum Punkte-Duell heraus. Antwort: <code class="inline">!annehmen</code> oder <code class="inline">!ablehnen</code>; Abbruch mit <code class="inline">!cancel</code>.</p><span class="tag muted-tag">Klassiker</span></article>
+        </div>
+      </section>
+
+      <section class="command-section" data-category="musik">
+        <div class="section-heading"><div><p class="section-kicker">Lizenzfreie Kanalsongs</p><h2>KI-Musik</h2></div><span class="section-count">9 Commands</span></div>
+        <p class="section-intro">Du möchtest einen per KI erzeugten Song hören? Hier gibt es eine kleine Auswahl mit Musiktiteln passend zum Kanal.</p>
+        <div class="command-grid">
+          <article class="command-card" data-search="songtruhe truhe voller eindruck"><code>!songtruhe</code><p>„Truhe voller Eindruck“</p></article>
+          <article class="command-card" data-search="songvg vogel-gourmet vogel gourmet"><code>!songvg</code><p>„Vogel-Gourmet“</p></article>
+          <article class="command-card" data-search="songfw futter-weisheiten futter weisheiten"><code>!songfw</code><p>„Futter-Weisheiten“</p></article>
+          <article class="command-card" data-search="songspst spatzen-stammtisch spatzen stammtisch"><code>!songspst</code><p>„Spatzen-Stammtisch“</p></article>
+          <article class="command-card" data-search="songphantom phantom futterschale"><code>!songphantom</code><p>„Das Phantom der Futterschale“</p></article>
+          <article class="command-card" data-search="songkohligang kohli gang"><code>!songkohligang</code><p>„Kohli &amp; die Gang“</p></article>
+          <article class="command-card" data-search="songstreife chuck dobby streife"><code>!songstreife</code><p>„Chuck &amp; Dobby auf Streife“</p></article>
+          <article class="command-card" data-search="songveteran veteran futterhaus humpi"><code>!songveteran</code><p>„Der Veteran vom Futterhaus“ (Humpi)</p></article>
+          <article class="command-card" data-search="songfeivel alle wege futterhaus feivel"><code>!songfeivel</code><p>„Alle Wege führen zum Futterhaus“ (Feivel)</p></article>
+        </div>
+      </section>
+    </div>
+
+    <p id="emptyState" class="empty" hidden>Keine passenden Commands gefunden.</p>
+
+    <footer class="site-footer">
+      <p>Private, nicht kommerzielle Command-Übersicht für die Zuschauer des Streams.</p>
+      <p>Keine Cookies, kein Tracking und keine extern eingebundenen Inhalte.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
