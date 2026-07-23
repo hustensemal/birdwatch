@@ -106,3 +106,126 @@ footer { margin-top: 46px; font-size: .84rem; }
   .hero-logo { grid-row: 1; justify-self: start; }
   .hero-logo img { width: 150px; }
 }
+
+/* Kompakte Command-Ansicht */
+.command-section { margin-bottom: 18px; }
+.section-heading {
+  align-items: center;
+  margin-bottom: 0;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--panel);
+}
+.section-heading > div { min-width: 0; }
+.section-heading h2 { font-size: clamp(1.1rem, 2.2vw, 1.45rem); }
+.section-kicker { margin-bottom: 3px; font-size: .68rem; }
+.section-count { margin-left: auto; }
+.section-toggle {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 4px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel-2);
+  color: var(--accent);
+  cursor: pointer;
+}
+.section-toggle span {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1;
+  transform: rotate(180deg);
+  transition: transform .18s ease;
+}
+.command-section.collapsed .section-toggle span { transform: rotate(0deg); }
+.command-section.collapsed .command-grid,
+.command-section.collapsed .section-intro,
+.command-section.collapsed .notice { display: none; }
+
+.section-intro,
+.notice { margin-top: 10px; }
+.command-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 8px;
+}
+.command-card {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.command-card:hover,
+.command-card:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: none;
+  outline: none;
+}
+.command-card code {
+  margin: 0;
+  font-size: .86rem;
+  white-space: nowrap;
+}
+.command-card p {
+  min-width: 0;
+  font-size: .82rem;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.command-card .tag {
+  position: static;
+  grid-column: 3;
+  grid-row: 1;
+  padding: 3px 5px;
+  font-size: .59rem;
+}
+.copy-mark {
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1;
+}
+.command-card:hover .copy-mark,
+.command-card:focus-visible .copy-mark { color: var(--accent); }
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  z-index: 100;
+  max-width: calc(100% - 28px);
+  padding: 10px 14px;
+  border: 1px solid rgba(242, 201, 76, .55);
+  border-radius: 999px;
+  background: #171d25;
+  color: var(--text);
+  box-shadow: 0 12px 36px rgba(0,0,0,.4);
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  pointer-events: none;
+  transition: opacity .16s ease, transform .16s ease;
+}
+.copy-toast.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 900px) {
+  .command-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .command-grid { grid-template-columns: 1fr; }
+  .command-card { grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto; }
+  .command-card p { white-space: normal; }
+  .section-heading { padding: 11px 12px; }
+}

@@ -22,3 +22,9 @@ Die Seite setzt keine Cookies, verwendet kein Tracking und lädt keine externen 
 ## Indexierung
 
 Die HTML-Datei enthält `noindex`-Anweisungen. Das erschwert die Aufnahme in seriöse Suchmaschinen, ist aber keine Zugangssperre. Jeder, der den Link kennt, kann die Seite aufrufen.
+
+## Bedienung
+
+- Kategorien lassen sich auf- und zuklappen.
+- Eine Suche öffnet automatisch nur die Bereiche mit passenden Treffern.
+- Ein Klick auf einen Command kopiert ihn in die Zwischenablage.
