@@ -34,6 +34,7 @@
       <div class="filters" role="group" aria-label="Kategorie auswählen">
         <button class="filter active" data-filter="all" type="button">Alle</button>
         <button class="filter" data-filter="voegel" type="button">Vögel</button>
+        <button class="filter" data-filter="szenen" type="button">Szenen-Auswahl</button>
         <button class="filter" data-filter="tiere" type="button">Weitere Tiere</button>
         <button class="filter" data-filter="essen" type="button">Begrüßung &amp; Verpflegung</button>
         <button class="filter" data-filter="sonstige" type="button">Sonstige</button>
@@ -74,6 +75,15 @@
         </div>
       </section>
 
+      <section class="command-section" data-category="szenen">
+        <div class="section-heading"><div><p class="section-kicker">Szenen zur Auswahl</p><h2>Etwas besonderes auf einer Cam? Wähle die passende Szene aus.</h2></div><span class="section-count">3 Commands</span></div>
+        <div class="command-grid">
+          <article class="command-card" data-search="cam stuttgart stg"><code>!stg</code><p>Kamera für den Standort Stuttgart</p></article>
+          <article class="command-card" data-search="cam niedersachsen nds"><code>!nds</code><p>Kamera für den Standort Niedersachsen</p></article>
+          <article class="command-card" data-search="cam niedersachsen stuttgart nds stg split beide standorte"><code>!split</code><p>Szene mit beiden Kameras im Split-Screen</p></article>
+        </div>
+      </section>
+      
       <section class="command-section" data-category="tiere">
         <div class="section-heading"><div><p class="section-kicker">Sichtungen</p><h2>Weitere Tiere – und komische Vögel</h2></div><span class="section-count">10 Commands</span></div>
         <div class="command-grid">
